@@ -1,0 +1,25 @@
+# Supabase CLI configuration for the *juice-menu-faisel-st* deployment.
+# `project_id` is only the local-development container name. It is NOT a remote project
+# reference and this folder is intentionally NOT linked to any remote project
+# (no supabase/.temp/project-ref). Link explicitly, after verifying the reference:
+#   npx supabase link --project-ref <NEW-PROJECT-REF>
+project_id = "juice-menu-faisel-st"
+
+[api]
+enabled = true
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+
+[db]
+port = 54322
+major_version = 15
+
+[db.seed]
+# The catalog seed is optional and run manually - never auto-applied on a reset.
+enabled = false
+
+[auth]
+enabled = true
+# SECURITY: staff accounts are created manually in the dashboard. Keep public
+# sign-ups OFF (see documentation/SECURITY_NOTES.md).
+enable_signup = false

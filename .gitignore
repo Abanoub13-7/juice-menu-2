@@ -1,0 +1,24 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Secrets — never commit real Supabase credentials
+.env
+.env.*
+!.env.example
+
+supabase/.temp/
+
+CON
+supabase/.temp/
+
+# Never commit MCP/CLI links that could point at another Supabase project
+.vscode/mcp.json
+supabase/.branches/
+supabase/.temp/
+*.tsbuildinfo
